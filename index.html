@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Relaxo Therapist – Premium Foot Massage</title>
+<meta name="description" content="Premium foot massage at your event, venue or home in Hyderabad. Gachibowli, HITEC City, Madhapur, Banjara Hills, Jubilee Hills and more.">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icon.svg">
+<meta name="theme-color" content="#1d4634">
+<style>
+:root{--bg:#f5eddc;--card:#fffaf0;--ink:#1b2a21;--muted:#665f4d;--green:#1d4634;--on-green:#f5eddc;--gold:#a8812f;--line:#e2d3ae;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1912;--card:#16241a;--ink:#f1e8d3;--muted:#a9ae9c;--green:#2c6a4e;--on-green:#f8f0dc;--gold:#d6b465;--line:#2a3a2e;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1912;--card:#16241a;--ink:#f1e8d3;--muted:#a9ae9c;--green:#2c6a4e;--on-green:#f8f0dc;--gold:#d6b465;--line:#2a3a2e;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,"Times New Roman",serif}
+h1,h2,h3{font-weight:400;line-height:1.15;margin:0}
+a{color:inherit}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;letter-spacing:.04em}
+.logo svg{width:30px;height:30px}
+.net{font:13px system-ui,sans-serif;padding:5px 12px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.net.off{border-color:var(--gold);color:var(--gold)}
+.hero{padding:56px 0 48px}
+.hero h1{font-size:clamp(40px,11vw,68px);letter-spacing:-.01em}
+.hero p{max-width:30em;color:var(--muted);margin:18px 0 28px}
+.btn{display:inline-block;background:var(--green);color:var(--on-green);border:0;border-radius:99px;padding:14px 28px;font:600 16px system-ui,sans-serif;cursor:pointer;text-decoration:none}
+.btn.ghost{background:none;color:var(--ink);border:1px solid var(--gold);margin-left:8px}
+.btn:focus-visible,select:focus-visible,input:focus-visible,.seg button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+section{padding:44px 0;border-top:1px solid var(--line)}
+h2{font-size:32px;margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 24px}
+.seg{display:inline-flex;border:1px solid var(--gold);border-radius:99px;overflow:hidden;margin:0 8px 16px 0}
+.seg button{background:none;border:0;color:var(--ink);padding:10px 20px;font:15px system-ui,sans-serif;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--gold);color:var(--bg)}
+.prices{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.price{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 18px}
+.price b{display:block;font-size:34px;font-weight:400;color:var(--gold)}
+.price span{font:14px system-ui,sans-serif;color:var(--muted)}
+.list{display:grid;gap:12px}
+.item{display:flex;justify-content:space-between;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.item small{display:block;color:var(--muted);font:14px/1.4 system-ui,sans-serif}
+.item button{white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1px solid var(--gold);border-radius:99px;padding:8px 18px;font:15px system-ui,sans-serif}
+form{display:grid;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
+label{display:grid;gap:6px;font:14px system-ui,sans-serif;color:var(--muted)}
+input,select{font:16px system-ui,sans-serif;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.addons{display:flex;flex-wrap:wrap;gap:14px;font:15px system-ui,sans-serif}
+.addons label{display:flex;align-items:center;gap:8px;color:var(--ink)}
+.addons input{width:auto}
+.total{font-size:26px;color:var(--gold)}
+.note{font:14px/1.5 system-ui,sans-serif;color:var(--muted)}
+.banner{display:none;background:var(--green);color:var(--on-green);border-radius:14px;padding:14px 18px;margin-bottom:16px;font:15px system-ui,sans-serif}
+.banner button{margin-left:10px;background:var(--gold);color:var(--bg);border:0;border-radius:99px;padding:8px 16px;font:600 14px system-ui,sans-serif;cursor:pointer}
+footer{padding:36px 0 96px;color:var(--muted);font:14px/1.6 system-ui,sans-serif;border-top:1px solid var(--line)}
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));box-shadow:0 6px 20px rgba(0,0,0,.25)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.stage{perspective:900px;height:230px;display:flex;justify-content:center;align-items:center;margin:0 0 26px}
+.lotus{position:relative;width:200px;height:200px;transform-style:preserve-3d;transform:rotateX(-14deg);animation:spin 16s linear infinite}
+.lotus i{position:absolute;left:50%;top:50%;width:50px;height:104px;margin:-104px 0 0 -25px;border-radius:50% 50% 50% 50%/85% 85% 15% 15%;background:linear-gradient(var(--gold),var(--green));border:1px solid var(--line);opacity:.92;transform-origin:50% 100%}
+@keyframes spin{to{transform:rotateX(-14deg) rotateY(360deg)}}
+.price,.tilt{transition:transform .15s ease;will-change:transform}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ph{border-radius:16px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/5;background:var(--card)}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+@media (prefers-reduced-motion:reduce){.lotus{animation:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="logo"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true" style="color:var(--gold)"><path d="M16 4c3 4 3 9 0 13-3-4-3-9 0-13zM16 17c-1-5-5-8-10-8 0 5 4 9 10 8zM16 17c1-5 5-8 10-8 0 5-4 9-10 8zM10 27c3-3 9-3 12 0"/></svg>Relaxo Therapist</div>
+  <span class="net" id="net" role="status">Online</span>
+</header>
+
+<div class="hero">
+  <h1>Rest your feet.<br>Reset your day.</h1>
+  <p>Professional foot massage with fresh towels, lotion and oils. We come to your event, venue or home across Hyderabad.</p>
+  <div class="stage" aria-hidden="true"><div class="lotus" id="lotus"></div></div>
+  <a class="btn" href="#book">Book a session</a><a class="btn ghost" href="#pricing">See pricing</a>
+</div>
+
+<section id="pricing">
+  <h2>Services and pricing</h2>
+  <p class="sub">Choose a therapist preference to see the rate.</p>
+  <div class="seg" role="group" aria-label="Therapist"><button type="button" data-g="male" aria-pressed="true">Male therapist</button><button type="button" data-g="female" aria-pressed="false">Female therapist</button></div>
+  <div class="prices" id="prices"></div>
+</section>
+
+<section>
+  <h2>Products</h2>
+  <p class="sub">Add any product to your booking. Prices are confirmed on WhatsApp.</p>
+  <div class="list" id="products"></div>
+</section>
+
+<section>
+  <h2>Where we work</h2>
+  <p class="sub">Hyderabad only. We come to you in these areas.</p>
+  <div class="chips" id="locs"></div>
+</section>
+
+<section id="galsec" hidden>
+  <h2>Gallery</h2>
+  <p class="sub">A look at what to expect.</p>
+  <div class="gal" id="gal"></div>
+</section>
+
+<section id="book">
+  <h2>Book your session</h2>
+  <p class="sub">Works without internet. If you are offline, your booking is saved on this phone and sent when you are back online.</p>
+  <div class="banner" id="banner"><span id="bmsg"></span><button type="button" id="sendq">Send now</button></div>
+  <form id="f" novalidate>
+    <div class="row">
+      <label>Your name<input id="name" autocomplete="name" required></label>
+      <label>Phone<input id="phone" type="tel" autocomplete="tel" required></label>
+    </div>
+    <div class="row">
+      <label>Therapist<select id="g"><option value="male">Male</option><option value="female">Female</option></select></label>
+      <label>Duration<select id="d"><option value="2">2 hours</option><option value="4">4 hours</option></select></label>
+    </div>
+    <div class="row">
+      <label>Area in Hyderabad<select id="loc"></select></label>
+      <label>Date<input id="date" type="date"></label>
+    </div>
+    <label>Address or landmark (optional)<input id="addr" autocomplete="street-address" maxlength="120"></label>
+    <div class="addons" id="addons"></div>
+    <div>Session price <span class="total" id="total">₹4,000</span></div>
+    <p class="note" id="err" role="alert" style="margin:0"></p>
+    <button class="btn" type="submit">Send booking on WhatsApp</button>
+  </form>
+</section>
+
+<footer>
+  <strong>Relaxo Therapist</strong><br>
+  Foot massage, towels, lotion and oils.<br>
+  Owner: Ramji Mishra<br>
+  <a href="https://wa.me/919133464645">WhatsApp +91 91334 64645</a>
+</footer>
+</div>
+<a class="btn fab" href="#book">Book now</a>
+
+<script>
+// ---- Edit these before going live ----
+var WHATSAPP = "919133464645";
+var LOCATIONS = ["Gachibowli", "HITEC City", "Madhapur", "Somajiguda", "Begumpet", "Banjara Hills", "Jubilee Hills"]; // Hyderabad only
+var PRICES = {male:{2:4000,4:7500}, female:{2:4500,4:8000}};
+var PRODUCTS = [
+  {n:"Foot towel", t:"Soft, fresh towel for every session"},
+  {n:"Relaxing lotion", t:"Light, non-greasy moisturiser"},
+  {n:"Massage oil", t:"Warm, scented oil for deeper relief"}
+];
+// --------------------------------------
+var $ = function(id){return document.getElementById(id)};
+var inr = function(n){return "₹" + n.toLocaleString("en-IN")};
+var view = {g:"male"};
+
+function drawPrices(){
+  $("prices").innerHTML = [2,4].map(function(h){
+    return '<div class="price"><span>' + h + ' hours</span><b>' + inr(PRICES[view.g][h]) + '</b></div>';
+  }).join("");
+}
+document.querySelectorAll(".seg button").forEach(function(b){
+  b.addEventListener("click", function(){
+    view.g = b.dataset.g;
+    document.querySelectorAll(".seg button").forEach(function(x){x.setAttribute("aria-pressed", x===b)});
+    $("g").value = view.g; drawPrices(); calc();
+  });
+});
+
+$("products").innerHTML = PRODUCTS.map(function(p,i){
+  return '<div class="item"><div>' + p.n + '<small>' + p.t + '</small></div><button type="button" class="btn ghost" style="margin:0;padding:10px 18px" data-add="' + i + '">Add</button></div>';
+}).join("");
+$("locs").innerHTML = LOCATIONS.map(function(l){return '<span class="chip">' + l + '</span>'}).join("");
+$("loc").innerHTML = LOCATIONS.map(function(l){return '<option>' + l + '</option>'}).join("");
+$("addons").innerHTML = PRODUCTS.map(function(p,i){
+  return '<label><input type="checkbox" id="ad' + i + '">' + p.n + '</label>';
+}).join("");
+
+document.querySelectorAll("[data-add]").forEach(function(b){
+  b.addEventListener("click", function(){
+    var c = $("ad" + b.dataset.add); c.checked = !c.checked;
+    b.textContent = c.checked ? "Added" : "Add";
+    if (c.checked) $("book").scrollIntoView();
+  });
+});
+
+function calc(){ $("total").textContent = inr(PRICES[$("g").value][$("d").value]); }
+$("g").addEventListener("change", calc);
+$("d").addEventListener("change", calc);
+$("date").min = new Date().toISOString().slice(0,10);
+
+function msg(b){
+  return "Hello Relaxo Therapist, I would like to book a foot massage.\n" +
+    "Booking ID: " + b.id + "\n" +
+    "Name: " + b.name + "\nPhone: " + b.phone + "\nTherapist: " + b.g + "\nDuration: " + b.d + " hours\n" +
+    "Area: " + b.loc + ", Hyderabad\n" + (b.addr ? "Address: " + b.addr + "\n" : "") + "Date: " + (b.date || "to be confirmed") + "\n" +
+    "Add-ons: " + (b.addons.length ? b.addons.join(", ") : "none") + "\nSession price: " + inr(b.price);
+}
+function wa(b){ return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg(b)); }
+function getQ(){ try{ return JSON.parse(localStorage.getItem("rt_queue") || "[]"); }catch(e){ return []; } }
+function setQ(q){ try{ localStorage.setItem("rt_queue", JSON.stringify(q)); }catch(e){} }
+
+function showBanner(){
+  var q = getQ();
+  $("banner").style.display = (q.length && navigator.onLine) ? "block" : "none";
+  $("bmsg").textContent = q.length + " saved booking" + (q.length>1 ? "s are" : " is") + " ready to send.";
+}
+function net(){
+  var on = navigator.onLine;
+  $("net").textContent = on ? "Online" : "Offline mode";
+  $("net").className = "net" + (on ? "" : " off");
+  showBanner();
+}
+window.addEventListener("online", net); window.addEventListener("offline", net);
+
+$("f").addEventListener("submit", function(e){
+  e.preventDefault();
+  var name = $("name").value.trim(), phone = $("phone").value.trim();
+  if (!name || phone.replace(/\D/g,"").length < 10){
+    $("err").textContent = "Enter your name and a 10-digit phone number to continue."; return;
+  }
+  $("err").textContent = "";
+  var b = {name:name, phone:phone, g:$("g").value, d:$("d").value, loc:$("loc").value, addr:$("addr").value.trim().slice(0,120), date:$("date").value,
+    addons:PRODUCTS.filter(function(p,i){return $("ad"+i).checked}).map(function(p){return p.n}),
+    price:PRICES[$("g").value][$("d").value]};
+  b.id = "RT" + Date.now().toString(36).toUpperCase();
+  if (navigator.onLine){ $("err").textContent = "Opening WhatsApp…"; location.href = wa(b); }
+  else { var q = getQ(); q.push(b); setQ(q); $("err").textContent = "You are offline. Booking saved on this phone. We will offer to send it when you are online."; }
+});
+$("sendq").addEventListener("click", function(){
+  var q = getQ(); if (!q.length) return;
+  var b0 = q.shift(); setQ(q); showBanner(); location.href = wa(b0);
+});
+
+drawPrices(); calc(); net();
+(function(){
+  var L = $("lotus"), i;
+  for (i = 0; i < 8; i++){ var p = document.createElement("i"); p.style.transform = "rotateY(" + (i*45) + "deg) rotateX(-52deg)"; L.appendChild(p); }
+  for (i = 0; i < 8; i++){ var q = document.createElement("i"); q.style.transform = "rotateY(" + (i*45+22) + "deg) rotateX(-22deg) scale(.72)"; L.appendChild(q); }
+  var gal = $("gal");
+  for (var n = 1; n <= 4; n++) (function(n){
+    var base = "/images/massage" + n, card = document.createElement("div"), img = new Image();
+    card.className = "tilt ph"; img.alt = "Foot massage session " + n;
+    img.onload = function(){ card.appendChild(img); gal.appendChild(card); $("galsec").hidden = false; };
+    img.onerror = function(){ if (!img.dataset.t){ img.dataset.t = "1"; img.src = base + ".jpg"; } };
+    img.src = base + ".webp";
+  })(n);
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  function card(e){ return e.target.closest ? e.target.closest(".tilt,.price") : null; }
+  document.addEventListener("pointermove", function(e){
+    var c = card(e); if (!c) return;
+    var r = c.getBoundingClientRect(), x = (e.clientX-r.left)/r.width - .5, y = (e.clientY-r.top)/r.height - .5;
+    c.style.transform = "perspective(700px) rotateY(" + (x*12) + "deg) rotateX(" + (-y*12) + "deg)";
+  });
+  document.addEventListener("pointerout", function(e){ var c = card(e); if (c) c.style.transform = ""; });
+})();
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js").catch(function(){});
+</script>
+</body>
+</html>
